@@ -66,7 +66,7 @@ $$
 x_t=\sigma_t\epsilon+(1-\sigma_t)x_0
 $$
 
-其中 $x_0$ 为原始图像，$\sigma_t$ 为对应时间步 $t$ 的噪声占比，$\epsilon$ 为高斯噪声。
+其中 $x_0$ 为原始图像， $\sigma_t$ 为对应时间步 $t$ 的噪声占比， $\epsilon$ 为高斯噪声。
 
 损失函数：
 
@@ -74,7 +74,7 @@ $$
 \mathrm{loss}=\mathrm{MSE}(x_t - \epsilon, v_t)
 $$
 
-其中 $\epsilon$ 是从 $x_0$ 获得 $x_t$ 所使用的高斯噪声，$v_t$ 是模型预测结果。
+其中 $\epsilon$ 是从 $x_0$ 获得 $x_t$ 所使用的高斯噪声， $v_t$ 是模型预测结果。
 
 一步采样：
 
