@@ -21,7 +21,7 @@
 
 需要安装的库：
 
-```toml
+```txt
 torch>=2.5.1
 lightning>=2.4.0
 numpy>=1.26.4
