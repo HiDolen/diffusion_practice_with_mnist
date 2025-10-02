@@ -34,7 +34,7 @@ ipywidgets>=8.1.5
 diffusers>=0.31.0
 matplotlib>=3.9.2
 pdm>=2.20.1
-pytorch-lightning-quick-start-utils @ git+https://github.com/HiDolen/pytorch_lightning_quick_start_utils@v0.2.0
+pytorch-lightning-quick-start-utils @ git+https://github.com/HiDolen/pytorch_lightning_quick_start_utils@v0.2.3
 einops>=0.8.0
 torchvision>=0.20.1
 ```
@@ -95,13 +95,15 @@ batch_size 为 256，预热 1000 steps 后学习率维持在 2e-4。
 - 借用 diffusers 库的 `FlowMatchEulerDiscreteScheduler` 生成 sigmas
 - 训练时从 logit-norm 取样时间步而不是均匀采样，以提升训练效率（详见 [Stable Diffusion 3 的报告](https://arxiv.org/pdf/2403.03206)）
 
-## 训练经验
+## 更新日志
 
-- loss 大小不能直接表明学习效果。低 loss 也可能会出现糟糕的生成结果
-- 过大的学习率会导致训练不稳定。实践下来将学习率设为 2e-4 已经是极限了
-- 可以将 embedding 总维度降到 128。模型仍然能收敛，就是效果会打折扣
-- 训练使用 offset noise 技巧效果不明显，训练使用 immiscible diffusion 技巧效果倒退。可能是不太适合 MNIST
-- 将训练图像的方差归一化到 1 会极大提升训练稳定性
+### 20251002
+
+重写训练代码，修复输入到模型的时间步不正确的问题。新代码文件为 `train_2.ipynb` 和 `train_2.py`。
+
+现在训练会更稳定，输出的图像也会更清晰。
+
+![train_2 训练结果](images/training_results_2.png)
 
 ## 参考来源
 

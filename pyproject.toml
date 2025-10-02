@@ -18,7 +18,7 @@ dependencies = [
     "diffusers>=0.31.0",
     "matplotlib>=3.9.2",
     "pdm>=2.20.1",
-    "pytorch-lightning-quick-start-utils @ git+https://github.com/HiDolen/pytorch_lightning_quick_start_utils@v0.2.0",
+    "pytorch-lightning-quick-start-utils @ git+https://github.com/HiDolen/pytorch_lightning_quick_start_utils@v0.2.3",
     "einops>=0.8.0",
     "torchvision>=0.20.1",
 ]
